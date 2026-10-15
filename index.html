@@ -1,363 +1,246 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shanavaz — Cloud Engineer & Associate Technical Lead</title>
-  <meta name="description" content="Portfolio of Shanavaz — Associate Technical Lead and Cloud Engineer with 11 years of experience in AWS, OCI, Linux/Windows Server administration and on-premises infrastructure. AWS SysOps, Solutions Architect and Security Specialty certified.">
-  <meta property="og:title" content="Shanavaz — Cloud Engineer & Associate Technical Lead">
-  <meta property="og:description" content="AWS, OCI and infrastructure engineer. AWS SysOps, Solutions Architect and Security Specialty certified.">
-  <meta property="og:type" content="website">
-  <meta name="theme-color" content="#070b13">
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#070b13">
+<meta name="description" content="Shanavaz — Associate Technical Lead and Cloud Engineer. 11 years in AWS, OCI, Linux/Windows and on-prem infrastructure. AWS SysOps, Solutions Architect and Security Specialty certified.">
+<title>Shanavaz — Cloud Engineer &amp; Associate Technical Lead</title>
+<style>
+:root{--bg:#070b13;--bg2:#0d1422;--card:#111a2c;--line:#1f2d47;--tx:#e6edf7;--mut:#8fa1bd;--ac:#38bdf8;--ac2:#818cf8;--ok:#34d399}
+@media (prefers-color-scheme:light){:root:not([data-theme=dark]){--bg:#f5f8fc;--bg2:#e9eff7;--card:#fff;--line:#d5deea;--tx:#0f1b2d;--mut:#51627c;--ac:#0369a1;--ac2:#4f46e5;--ok:#047857}}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{background:var(--bg);color:var(--tx);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1100px;margin:auto;padding:0 20px}
+nav{position:fixed;top:0;left:0;right:0;z-index:50;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{font-weight:800;letter-spacing:.08em}
+.links{display:flex;gap:20px;font-size:14px;color:var(--mut)}
+.links a:hover{color:var(--ac)}
+.btn{display:inline-block;padding:10px 20px;border-radius:10px;font-weight:600;font-size:14px;border:1px solid var(--line);background:var(--card);cursor:pointer;color:var(--tx);transition:.2s}
+.btn:hover{border-color:var(--ac);transform:translateY(-2px)}
+.btn.p{background:linear-gradient(135deg,var(--ac),var(--ac2));border:0;color:#fff}
+#menu{display:none;background:none;border:0;color:var(--tx);font-size:24px}
+@media(max-width:800px){.links{display:none;position:absolute;top:60px;left:0;right:0;flex-direction:column;background:var(--bg2);padding:16px 20px}.links.open{display:flex}#menu{display:block}}
+.hero{min-height:100vh;display:flex;align-items:center;padding:100px 0 60px;background:radial-gradient(circle at 80% 20%,rgba(56,189,248,.18),transparent 45%),radial-gradient(circle at 10% 80%,rgba(129,140,248,.15),transparent 40%)}
+.hero .wrap{display:grid;grid-template-columns:1.3fr 1fr;gap:40px;align-items:center}
+@media(max-width:800px){.hero .wrap{grid-template-columns:1fr}}
+.tag{display:inline-block;font-size:12px;letter-spacing:.12em;color:var(--ac);border:1px solid var(--line);padding:4px 12px;border-radius:99px;margin-bottom:16px}
+h1{font-size:clamp(34px,6vw,60px);line-height:1.1;margin-bottom:10px}
+.grad{background:linear-gradient(135deg,var(--ac),var(--ac2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.role{font-size:20px;color:var(--mut);margin-bottom:16px;min-height:30px}
+.hero p.d{color:var(--mut);max-width:560px;margin-bottom:24px}
+.cta{display:flex;flex-wrap:wrap;gap:10px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+.chip{font-size:13px;padding:6px 12px;border-radius:99px;background:var(--card);border:1px solid var(--line);color:var(--mut)}
+.orb{aspect-ratio:1;border-radius:50%;max-width:340px;margin:auto;display:grid;place-items:center;font-size:90px;background:conic-gradient(from 0deg,var(--ac),var(--ac2),var(--ok),var(--ac));animation:spin 14s linear infinite;position:relative}
+.orb::before{content:"";position:absolute;inset:6px;border-radius:50%;background:var(--bg2)}
+.orb span{position:relative;animation:spin 14s linear infinite reverse}
+@keyframes spin{to{transform:rotate(360deg)}}
+.stats{padding:40px 0;background:var(--bg2);border-block:1px solid var(--line)}
+.stats .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}
+@media(max-width:700px){.stats .wrap{grid-template-columns:repeat(2,1fr)}}
+.stats b{display:block;font-size:40px;color:var(--ac)}
+.stats small{color:var(--mut)}
+section{padding:80px 0}
+.eyebrow{color:var(--ac);font-size:12px;letter-spacing:.15em;text-transform:uppercase}
+h2{font-size:clamp(26px,4vw,38px);margin:6px 0 10px}
+.sub{color:var(--mut);max-width:640px;margin-bottom:36px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;transition:.25s}
+.card:hover{transform:translateY(-4px);border-color:var(--ac)}
+.card .ic{font-size:30px;margin-bottom:8px}
+.card h3{font-size:18px;margin-bottom:6px}
+.card p,.card li{color:var(--mut);font-size:14px}
+.card ul{padding-left:18px;margin-top:8px}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.tags span{font-size:11px;padding:3px 9px;border-radius:6px;background:var(--bg2);color:var(--ac);border:1px solid var(--line)}
+.badge{font-size:11px;color:var(--ok);margin-bottom:6px;display:block;font-weight:600}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+.f{padding:7px 16px;border-radius:99px;border:1px solid var(--line);background:var(--card);color:var(--mut);cursor:pointer;font-size:13px}
+.f.on{background:linear-gradient(135deg,var(--ac),var(--ac2));color:#fff;border-color:transparent}
+.hide{display:none!important}
+.tl{border-left:2px solid var(--line);margin-left:8px;padding-left:28px}
+.tl article{position:relative;margin-bottom:34px}
+.tl article::before{content:"";position:absolute;left:-37px;top:6px;width:14px;height:14px;border-radius:50%;background:var(--ac);box-shadow:0 0 0 4px var(--bg)}
+.tl h3{font-size:19px}
+.tl .m{color:var(--ac);font-size:13px;margin-bottom:8px}
+.tl li{color:var(--mut);font-size:14px;margin-left:18px}
+.skill{display:flex;align-items:center;gap:8px;padding:10px 14px;background:var(--card);border:1px solid var(--line);border-radius:10px;font-size:14px}
+.sk{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px}
+.contact{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+footer{padding:30px 0;text-align:center;color:var(--mut);font-size:13px;border-top:1px solid var(--line)}
+.rv{opacity:0;transform:translateY(24px);transition:.7s}
+.rv.in{opacity:1;transform:none}
+#fab{position:fixed;right:18px;bottom:18px;z-index:60}
+#term{position:fixed;right:18px;bottom:70px;width:min(420px,calc(100vw - 36px));background:#05080f;color:#c9d6ea;border:1px solid var(--line);border-radius:12px;z-index:60;display:none;font:13px/1.5 ui-monospace,Menlo,Consolas,monospace}
+#term.open{display:block}
+#term header{display:flex;justify-content:space-between;padding:8px 12px;border-bottom:1px solid #1f2d47;color:#8fa1bd}
+#term header button{background:none;border:0;color:inherit;cursor:pointer;font-size:16px}
+.qc{display:flex;flex-wrap:wrap;gap:6px;padding:8px 12px}
+.qc button{background:#111a2c;border:1px solid #1f2d47;color:#38bdf8;border-radius:6px;padding:3px 8px;cursor:pointer;font:inherit;font-size:12px}
+#out{height:190px;overflow:auto;padding:0 12px;white-space:pre-wrap}
+#term form{display:flex;padding:8px 12px;border-top:1px solid #1f2d47;gap:6px}
+#term input{flex:1;background:none;border:0;color:inherit;font:inherit;outline:0}
+</style>
 </head>
 <body>
-
-<!-- ================= NAV ================= -->
-<header class="nav">
-  <div class="container">
-    <a class="brand" href="#overview">☁️ SHANA<span>VAZ</span></a>
-    <button class="menu-btn" id="menuBtn" aria-label="Toggle menu">☰</button>
-    <ul id="navList">
-      <li><a href="#overview">Overview</a></li>
-      <li><a href="#focus">Focus</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#certifications">Certifications</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><a class="btn primary" href="shanavaz_resume.pdf" target="_blank" rel="noopener">Resume</a></li>
-    </ul>
-  </div>
-</header>
-
-<main>
-
-<!-- ================= HERO ================= -->
-<section class="hero" id="overview">
-  <div class="container">
-    <span class="tag">📍 Bangalore, India · 11 years in cloud &amp; IT infrastructure</span>
-    <h1>Hi, I'm <span class="grad">Shanavaz</span>.</h1>
-    <p class="role">Associate Technical Lead · Cloud Engineer</p>
-    <p class="summary">
-      I design, run and secure cloud and on-premises infrastructure. Currently at <strong>Rapyder Cloud Solutions</strong>,
-      working across <strong>AWS</strong> and <strong>Oracle Cloud (OCI)</strong>, with deep roots in Linux and Windows Server
-      administration and Dell/HP/Fujitsu/Huawei server and storage deployments. AWS-certified in SysOps, Solutions Architect
-      and Security Specialty.
-    </p>
-    <div class="cta">
-      <a class="btn primary" href="#projects">View Projects →</a>
-      <a class="btn" href="shanavaz_resume.pdf" target="_blank" rel="noopener">📄 Download Resume</a>
-      <a class="btn" href="https://github.com/shanavaz-eng" target="_blank" rel="noopener">🐙 GitHub</a>
-      <a class="btn" href="mailto:abbashcne@gmail.com">✉️ Email</a>
-    </div>
-    <div class="chips">
-      <span class="chip">☁️ AWS</span>
-      <span class="chip">🔶 Oracle Cloud</span>
-      <span class="chip">⚡ Terraform</span>
-      <span class="chip">🔐 IAM &amp; Security</span>
-      <span class="chip">🐧 Linux</span>
-      <span class="chip">🪟 Windows Server</span>
-      <span class="chip">🧩 JumpCloud</span>
-    </div>
-
-    <div class="stats">
-      <div class="stat"><b data-count="11" data-suffix="+">0</b><span>Years of experience</span></div>
-      <div class="stat"><b data-count="3" data-suffix="">0</b><span>AWS certifications</span></div>
-      <div class="stat"><b data-count="250" data-suffix="">0</b><span>Thin clients deployed (VDI)</span></div>
-      <div class="stat"><b data-count="100" data-suffix=" TB">0</b><span>Enterprise storage configured</span></div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= FOCUS ================= -->
-<section class="alt" id="focus">
-  <div class="container">
-    <p class="eyebrow">What I do</p>
-    <h2>Core Focus Areas</h2>
-    <p class="lead">Building reliable, secure and well-run infrastructure, from rack-and-stack data centers to multi-account AWS environments.</p>
-    <div class="grid cols-4">
-      <div class="card reveal">
-        <div class="icon">☁️</div>
-        <h3>AWS Operations</h3>
-        <p>Provisioning and managing EC2, S3, ALB/ASG, Lambda and ECS, with CloudWatch monitoring and alerting.</p>
-      </div>
-      <div class="card reveal">
-        <div class="icon">🔐</div>
-        <h3>Security &amp; Identity</h3>
-        <p>IAM policies and roles, KMS, WAF, Shield, security groups and NACLs, plus org-wide MFA and SSO with JumpCloud.</p>
-      </div>
-      <div class="card reveal">
-        <div class="icon">⚡</div>
-        <h3>Automation &amp; IaC</h3>
-        <p>Terraform for repeatable infrastructure and AWS Run Command for patching and routine admin tasks.</p>
-      </div>
-      <div class="card reveal">
-        <div class="icon">🖥️</div>
-        <h3>On-Prem Infrastructure</h3>
-        <p>Hyper-V failover clustering, Active Directory, SAN storage, VDI and data center builds for government and defence.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= PROJECTS ================= -->
-<section id="projects">
-  <div class="container">
-    <p class="eyebrow">Selected work</p>
-    <h2>Key Projects</h2>
-    <p class="lead">Cloud implementations, migrations and data center deployments across fintech, food-tech, government and defence.</p>
-
-    <div class="filters" id="projectFilters">
-      <button class="filter active" data-filter="all">All</button>
-      <button class="filter" data-filter="cloud">Cloud &amp; Migration</button>
-      <button class="filter" data-filter="onprem">On-Prem &amp; Data Center</button>
-      <button class="filter" data-filter="govt">Government &amp; Defence</button>
-    </div>
-
-    <div class="grid cols-3" id="projectGrid">
-
-      <article class="card reveal" data-cat="cloud">
-        <span class="badge">Multi-account AWS</span>
-        <h3>Biryani By Kilo</h3>
-        <p class="client">Food-tech</p>
-        <p>Implemented AWS solutions across multiple accounts, designing, deploying and operating highly available, scalable and fault-tolerant systems.</p>
-        <div class="tags"><span class="tag-s">EC2</span><span class="tag-s">S3</span><span class="tag-s">EBS</span><span class="tag-s">Route 53</span><span class="tag-s">RDS</span><span class="tag-s">Aurora</span></div>
-      </article>
-
-      <article class="card reveal" data-cat="cloud">
-        <span class="badge">On-prem → AWS</span>
-        <h3>Navi Migration</h3>
-        <p class="client">Financial company</p>
-        <p>Led application migration from on-premises to AWS using AWS Migration Hub: landing zone, cost estimation, discovery and assessment.</p>
-        <ul>
-          <li>Backup, monitoring and patching configured</li>
-          <li>ALB, Auto Scaling and high availability</li>
-          <li>GuardDuty for threat detection</li>
-        </ul>
-        <div class="tags"><span class="tag-s">Migration Hub</span><span class="tag-s">ALB</span><span class="tag-s">ASG</span><span class="tag-s">GuardDuty</span></div>
-      </article>
-
-      <article class="card reveal" data-cat="onprem govt">
-        <span class="badge">100 TB storage</span>
-        <h3>Karnataka State Police</h3>
-        <p class="client">Government of Karnataka</p>
-        <p>Configured Huawei OceanStor 5000 V5 with 100 TB storage: LUNs, RAID and fibre connections to a Lenovo Brocade SAN switch and Huawei E9000 blade enclosure.</p>
-        <ul>
-          <li>Windows Server 2019 on Huawei CH121 V5 blade, RAID 1</li>
-        </ul>
-        <div class="tags"><span class="tag-s">Huawei OceanStor</span><span class="tag-s">SAN</span><span class="tag-s">RAID</span><span class="tag-s">Windows Server 2019</span></div>
-      </article>
-
-      <article class="card reveal" data-cat="onprem govt">
-        <span class="badge">Government data center</span>
-        <h3>KSRSAC Data Centre</h3>
-        <p class="client">Karnataka State Remote Sensing Application Centre</p>
-        <p>Installed and configured Windows Server 2012 R2 with RAID-5 on Fujitsu Primergy servers.</p>
-        <ul>
-          <li>Domain, Hyper-V, failover clustering and Group Policy</li>
-          <li>Mounted racks and configured SAN storage and fibre connectivity</li>
-        </ul>
-        <div class="tags"><span class="tag-s">Fujitsu Primergy</span><span class="tag-s">Hyper-V</span><span class="tag-s">Failover Clustering</span></div>
-      </article>
-
-      <article class="card reveal" data-cat="onprem govt">
-        <span class="badge">250 thin clients</span>
-        <h3>Satish Dhawan Space Centre</h3>
-        <p class="client">SHAR, Sriharikota</p>
-        <p>Led installation and configuration of 250 Dell Wyse thin clients with a VDI solution.</p>
-        <div class="tags"><span class="tag-s">VDI</span><span class="tag-s">Dell Wyse</span></div>
-      </article>
-
-      <article class="card reveal" data-cat="onprem govt">
-        <span class="badge">Defence</span>
-        <h3>Indian Air Force</h3>
-        <p class="client">Ministry of Defence</p>
-        <p>Installed and configured Windows Server 2012 R2 on Fujitsu Primergy RX2530 M2, including RAID 1 configuration and domain migration.</p>
-        <div class="tags"><span class="tag-s">Windows Server 2012 R2</span><span class="tag-s">RAID 1</span><span class="tag-s">Active Directory</span></div>
-      </article>
-
-    </div>
-  </div>
-</section>
-
-<!-- ================= EXPERIENCE ================= -->
-<section class="alt" id="experience">
-  <div class="container">
-    <p class="eyebrow">Career</p>
-    <h2>Professional Experience</h2>
-    <p class="lead">From IT support and data center operations to leading cloud engineering work on AWS.</p>
-
-    <div class="timeline">
-      <div class="t-item reveal">
-        <h3>Associate Technical Lead</h3>
-        <div class="t-meta">Rapyder Cloud Solutions · November 2022 – Present</div>
-        <ul>
-          <li>Provision, configure and manage EC2 instances to meet application requirements.</li>
-          <li>Install and maintain software, security updates and patches on EC2 instances.</li>
-          <li>Monitor instance health and performance with CloudWatch; set alarms for threshold breaches and anomalies.</li>
-          <li>Configure security groups, key pairs and IAM roles; manage IAM policies, roles and permissions.</li>
-          <li>Automate patch management and other admin tasks with AWS Run Command.</li>
-          <li>Manage S3 buckets and lifecycle policies for data archival.</li>
-          <li>Configure ALB routing rules, listener policies and health checks, and Auto Scaling configurations.</li>
-          <li>Deploy serverless functions with AWS Lambda and manage ECS clusters.</li>
-        </ul>
-      </div>
-
-      <div class="t-item reveal">
-        <h3>IT Support Team Lead</h3>
-        <div class="t-meta">Cerebra Integrated Technologies Limited · July 2013 – October 2022</div>
-        <ul>
-          <li>Provided troubleshooting, administration and service restoration for Windows Server 2003, 2008 and 2012.</li>
-          <li>Administered Active Directory, DNS and Group Policy Objects.</li>
-          <li>Configured and troubleshot network, router and firewall systems.</li>
-          <li>Managed and monitored the company AWS account, including Payroll, Web, Tally and application servers.</li>
-        </ul>
-      </div>
-    </div>
-
-    <h3 style="margin: 48px 0 16px;">Leadership</h3>
-    <div class="grid cols-3">
-      <div class="card"><p>Communicating management goals and accountability, and aligning team members to their roles.</p></div>
-      <div class="card"><p>Delegating work based on individual strengths and keeping the team on task and on schedule.</p></div>
-      <div class="card"><p>Motivating team members to perform at their best, with honesty, integrity and approachability.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= SKILLS ================= -->
-<section id="skills">
-  <div class="container">
-    <p class="eyebrow">Toolbox</p>
-    <h2>Technical Skills</h2>
-    <p class="lead">Hands-on across AWS, OCI, identity management, infrastructure as code and on-premises systems.</p>
-
-    <div class="filters" id="skillFilters">
-      <button class="filter active" data-filter="all">All</button>
-      <button class="filter" data-filter="aws">AWS</button>
-      <button class="filter" data-filter="security">Security &amp; Identity</button>
-      <button class="filter" data-filter="devops">IaC &amp; Tools</button>
-      <button class="filter" data-filter="systems">Systems &amp; On-Prem</button>
-    </div>
-
-    <div class="skill-grid" id="skillGrid">
-      <div class="skill" data-cat="aws"><i>🖥️</i> EC2</div>
-      <div class="skill" data-cat="aws"><i>⚡</i> Lambda</div>
-      <div class="skill" data-cat="aws"><i>🌱</i> Elastic Beanstalk</div>
-      <div class="skill" data-cat="aws"><i>📦</i> ECS</div>
-      <div class="skill" data-cat="aws"><i>🖱️</i> AppStream</div>
-      <div class="skill" data-cat="aws"><i>🪣</i> S3 / EBS / Glacier</div>
-      <div class="skill" data-cat="aws"><i>🗄️</i> RDS</div>
-      <div class="skill" data-cat="aws"><i>🌐</i> VPC</div>
-      <div class="skill" data-cat="aws"><i>🔌</i> Direct Connect</div>
-      <div class="skill" data-cat="aws"><i>🧭</i> Route 53</div>
-      <div class="skill" data-cat="aws"><i>🚀</i> CloudFront</div>
-      <div class="skill" data-cat="aws"><i>⚖️</i> Elastic Load Balancer</div>
-      <div class="skill" data-cat="aws"><i>📈</i> CloudWatch / CloudTrail</div>
-
-      <div class="skill" data-cat="security"><i>🔑</i> IAM</div>
-      <div class="skill" data-cat="security"><i>🗝️</i> KMS</div>
-      <div class="skill" data-cat="security"><i>🛡️</i> AWS Shield / WAF</div>
-      <div class="skill" data-cat="security"><i>🧱</i> Security Groups / NACLs</div>
-      <div class="skill" data-cat="security"><i>🧩</i> JumpCloud (SSO, MFA, MDM)</div>
-      <div class="skill" data-cat="security"><i>🔏</i> SAML &amp; OIDC</div>
-
-      <div class="skill" data-cat="devops"><i>⚡</i> Terraform</div>
-      <div class="skill" data-cat="devops"><i>📡</i> Site24x7</div>
-      <div class="skill" data-cat="devops"><i>📡</i> StatusCake</div>
-      <div class="skill" data-cat="devops"><i>🎫</i> ServiceNow / Zoho</div>
-      <div class="skill" data-cat="devops"><i>🔧</i> PuTTY / WinSCP</div>
-
-      <div class="skill" data-cat="systems"><i>🐧</i> Linux</div>
-      <div class="skill" data-cat="systems"><i>🪟</i> Windows Server 2012 R2–2019</div>
-      <div class="skill" data-cat="systems"><i>📁</i> Active Directory / GPO</div>
-      <div class="skill" data-cat="systems"><i>🌍</i> DNS / DHCP</div>
-      <div class="skill" data-cat="systems"><i>🔁</i> Hyper-V &amp; Failover Clustering</div>
-      <div class="skill" data-cat="systems"><i>💾</i> Enterprise Storage &amp; Backup</div>
-      <div class="skill" data-cat="systems"><i>📶</i> Wired &amp; Wi-Fi Networking</div>
-      <div class="skill" data-cat="systems"><i>📹</i> Surveillance &amp; Printing</div>
-      <div class="skill" data-cat="systems"><i>📊</i> Office 365 / Tally</div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= CERTIFICATIONS ================= -->
-<section class="alt" id="certifications">
-  <div class="container">
-    <p class="eyebrow">Credentials</p>
-    <h2>Certifications &amp; Education</h2>
-    <p class="lead">Industry certifications from AWS, Microsoft and JumpCloud, backed by a formal education.</p>
-
-    <div class="grid cols-3">
-      <div class="card cert reveal"><div class="icon">🏆</div><div><h3>AWS Certified SysOps Administrator</h3><p>Associate</p><small>✓ Certified</small></div></div>
-      <div class="card cert reveal"><div class="icon">🏆</div><div><h3>AWS Certified Solutions Architect</h3><p>Associate</p><small>✓ Certified</small></div></div>
-      <div class="card cert reveal"><div class="icon">🛡️</div><div><h3>AWS Certified Security</h3><p>Specialty</p><small>✓ Certified</small></div></div>
-      <div class="card cert reveal"><div class="icon">🪟</div><div><h3>Microsoft Certified Systems Administrator</h3><p>MCSA — Windows Server 2016</p><small>✓ Certified</small></div></div>
-      <div class="card cert reveal"><div class="icon">🧩</div><div><h3>JumpCloud Certified</h3><p>Core</p><small>✓ Certified</small></div></div>
-    </div>
-
-    <h3 style="margin: 48px 0 16px;">🎓 Education</h3>
-    <div class="grid cols-2">
-      <div class="card"><h3>Master of Commerce (M.Com)</h3><p>Dr. Bhimrao Ambedkar University, Agra (RBS College) · 2008</p></div>
-      <div class="card"><h3>Bachelor of Commerce (B.Com)</h3><p>RBS College, Agra · 2006</p></div>
-      <div class="card"><h3>IT Certificate Course</h3><p>HCL, 12-month program covering A+, N+, CCNA, Server 2012 R2 and Linux · 2008</p></div>
-      <div class="card"><h3>12th Standard</h3><p>St. John's Inter College, U.P. Board · 2002</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= CONTACT ================= -->
-<section id="contact">
-  <div class="container">
-    <p class="eyebrow">Get in touch</p>
-    <h2>Let's Connect</h2>
-    <p class="lead">Open to conversations about cloud engineering, infrastructure and opportunities.</p>
-    <div class="grid cols-3">
-      <div class="card">
-        <div class="icon">✉️</div>
-        <h3>Email</h3>
-        <p><a href="mailto:abbashcne@gmail.com">abbashcne@gmail.com</a></p>
-      </div>
-      <div class="card">
-        <div class="icon">🐙</div>
-        <h3>GitHub</h3>
-        <p><a href="https://github.com/shanavaz-eng" target="_blank" rel="noopener">github.com/shanavaz-eng</a></p>
-      </div>
-      <div class="card">
-        <div class="icon">📄</div>
-        <h3>Resume</h3>
-        <p><a href="shanavaz_resume.pdf" target="_blank" rel="noopener">Download PDF</a></p>
-      </div>
-    </div>
-  </div>
-</section>
-
-</main>
-
-<footer>
-  <div class="container">
-    © <span id="year">2026</span> Shanavaz · Bangalore, India ·
-    <a href="#overview">Back to top ↑</a>
-  </div>
-</footer>
-
-<!-- ================= CLI WIDGET ================= -->
-<button class="fab" id="termToggle">💻 &gt;_ Cloud CLI</button>
-<div class="term" id="term" role="dialog" aria-label="Cloud CLI">
-  <div class="term-bar"><span>shanavaz-cli v1.0 — bash</span><button id="termClose" aria-label="Close">×</button></div>
-  <div class="term-chips">
-    <button data-cmd="whoami">👤 whoami</button>
-    <button data-cmd="skills">🛠️ skills</button>
-    <button data-cmd="certs">🏆 certs</button>
-    <button data-cmd="projects">🚀 projects</button>
-    <button data-cmd="contact">✉️ contact</button>
-    <button data-cmd="help">❓ help</button>
-    <button data-cmd="clear">🧹 clear</button>
-  </div>
-  <div class="term-out" id="termOut">Welcome to Shanavaz's cloud shell. Type "help" or tap a command above.</div>
-  <div class="term-in"><span>shanavaz@cloud:~$</span><input id="termInput" autocomplete="off" spellcheck="false" aria-label="Command"></div>
+<nav><div class="wrap">
+<a href="#overview" class="logo">☁️ SHANAVAZ</a>
+<div class="links" id="links">
+<a href="#focus">Focus</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#certifications">Certifications</a><a href="#contact">Contact</a>
+<a href="shanavaz_resume.pdf" class="btn p" style="padding:6px 14px;color:#fff">📄 Resume</a>
 </div>
+<button id="menu" aria-label="Menu">☰</button>
+</div></nav>
 
-<script src="script.js"></script>
+<header class="hero" id="overview"><div class="wrap">
+<div>
+<span class="tag">11 YEARS · CLOUD &amp; IT INFRASTRUCTURE</span>
+<h1>Hi, I'm <span class="grad">Shanavaz.</span></h1>
+<div class="role">I specialize in <b id="typed" style="color:var(--ac)"></b><span style="color:var(--ac)">|</span></div>
+<p class="d">Associate Technical Lead and Cloud Engineer based in Bangalore, India. I design, run and secure cloud and on-premises infrastructure at <b>Rapyder Cloud Solutions</b> across <b>AWS</b> and <b>Oracle Cloud (OCI)</b>, with deep roots in Linux, Windows Server and data center builds for government and defence.</p>
+<div class="cta">
+<a class="btn p" href="#projects">Explore Projects →</a>
+<a class="btn" href="shanavaz_resume.pdf">📄 Download Resume</a>
+<a class="btn" href="https://github.com/shanavaz-eng">🐙 GitHub</a>
+<a class="btn" href="mailto:abbashcne@gmail.com">✉️ Email</a>
+</div>
+<div class="chips"><span class="chip">☁️ AWS</span><span class="chip">🔶 Oracle Cloud</span><span class="chip">⚡ Terraform</span><span class="chip">🔐 IAM &amp; Security</span><span class="chip">🐧 Linux</span><span class="chip">🪟 Windows Server</span><span class="chip">🧩 JumpCloud</span></div>
+</div>
+<div class="orb"><span>☁️</span></div>
+</div></header>
+
+<div class="stats"><div class="wrap">
+<div><b data-n="11" data-s="+">0</b><small>Years of experience</small></div>
+<div><b data-n="3">0</b><small>AWS certifications</small></div>
+<div><b data-n="250" data-s="+">0</b><small>Thin clients deployed (VDI)</small></div>
+<div><b data-n="100" data-s=" TB">0</b><small>Enterprise storage configured</small></div>
+</div></div>
+
+<section id="focus"><div class="wrap rv">
+<span class="eyebrow">What I do</span><h2>Core Focus Areas</h2>
+<p class="sub">Reliable, secure and well-run infrastructure, from rack-and-stack data centers to multi-account AWS environments.</p>
+<div class="grid">
+<div class="card"><div class="ic">☁️</div><h3>AWS Operations</h3><p>Provisioning and managing EC2, S3, ALB/ASG, Lambda and ECS, with CloudWatch monitoring and alerting.</p><div class="tags"><span>EC2</span><span>S3</span><span>ALB/ASG</span><span>Lambda</span></div></div>
+<div class="card"><div class="ic">🔐</div><h3>Security &amp; Identity</h3><p>IAM policies and roles, KMS, WAF, Shield, security groups and NACLs, plus org-wide MFA and SSO with JumpCloud.</p><div class="tags"><span>IAM</span><span>KMS</span><span>WAF</span><span>JumpCloud</span></div></div>
+<div class="card"><div class="ic">⚡</div><h3>Automation &amp; IaC</h3><p>Terraform for repeatable infrastructure and AWS Run Command for patching and routine admin tasks.</p><div class="tags"><span>Terraform</span><span>Run Command</span></div></div>
+<div class="card"><div class="ic">🖥️</div><h3>On-Prem Infrastructure</h3><p>Hyper-V failover clustering, Active Directory, SAN storage, VDI and data center builds for government and defence.</p><div class="tags"><span>Hyper-V</span><span>AD</span><span>SAN</span><span>VDI</span></div></div>
+</div></div></section>
+
+<section id="projects" style="background:var(--bg2)"><div class="wrap rv">
+<span class="eyebrow">Selected work</span><h2>Key Projects</h2>
+<p class="sub">Cloud implementations, migrations and data center deployments across fintech, food-tech, government and defence.</p>
+<div class="filters" data-t="#pg">
+<button class="f on" data-f="all">All</button><button class="f" data-f="cloud">Cloud &amp; Migration</button><button class="f" data-f="onprem">On-Prem &amp; Data Center</button><button class="f" data-f="gov">Government &amp; Defence</button>
+</div>
+<div class="grid" id="pg">
+<div class="card" data-c="cloud"><span class="badge">Multi-account AWS</span><h3>Biryani By Kilo</h3><p>Food-tech. Implemented AWS solutions across multiple accounts, designing, deploying and operating highly available, scalable and fault-tolerant systems.</p><div class="tags"><span>EC2</span><span>S3</span><span>EBS</span><span>Route 53</span><span>RDS</span><span>Aurora</span></div></div>
+<div class="card" data-c="cloud"><span class="badge">On-prem → AWS</span><h3>Navi Migration</h3><p>Financial company. Led migration to AWS using Migration Hub: landing zone, cost estimation, discovery and assessment.</p><ul><li>Backup, monitoring and patching</li><li>ALB, Auto Scaling, high availability</li><li>GuardDuty threat detection</li></ul><div class="tags"><span>Migration Hub</span><span>ALB</span><span>ASG</span><span>GuardDuty</span></div></div>
+<div class="card" data-c="gov onprem"><span class="badge">100 TB storage</span><h3>Karnataka State Police</h3><p>Government of Karnataka. Configured Huawei OceanStor 5000 V5 with 100 TB: LUNs, RAID and fibre to a Lenovo Brocade SAN switch and Huawei E9000 blade enclosure.</p><ul><li>Windows Server 2019 on CH121 V5 blade, RAID 1</li></ul><div class="tags"><span>OceanStor</span><span>SAN</span><span>RAID</span></div></div>
+<div class="card" data-c="gov onprem"><span class="badge">Government data center</span><h3>KSRSAC Data Centre</h3><p>Karnataka State Remote Sensing Application Centre. Installed Windows Server 2012 R2 with RAID-5 on Fujitsu Primergy servers.</p><ul><li>Domain, Hyper-V, failover clustering, GPO</li><li>Racks mounted, SAN and fibre configured</li></ul><div class="tags"><span>Primergy</span><span>Hyper-V</span><span>Clustering</span></div></div>
+<div class="card" data-c="gov onprem"><span class="badge">250 thin clients</span><h3>Satish Dhawan Space Centre</h3><p>SHAR, Sriharikota. Led installation and configuration of 250 Dell Wyse thin clients with a VDI solution.</p><div class="tags"><span>VDI</span><span>Dell Wyse</span></div></div>
+<div class="card" data-c="gov onprem"><span class="badge">Defence</span><h3>Indian Air Force</h3><p>Ministry of Defence. Installed Windows Server 2012 R2 on Fujitsu Primergy RX2530 M2, with RAID 1 and domain migration.</p><div class="tags"><span>Server 2012 R2</span><span>RAID 1</span><span>Active Directory</span></div></div>
+</div></div></section>
+
+<section id="experience"><div class="wrap rv">
+<span class="eyebrow">Career</span><h2>Professional Journey</h2>
+<p class="sub">From IT support and data center operations to leading cloud engineering work on AWS.</p>
+<div class="tl">
+<article><h3>Associate Technical Lead</h3><div class="m">Rapyder Cloud Solutions · Nov 2022 – Present</div><ul>
+<li>Provision, configure and manage EC2 instances to meet application requirements.</li>
+<li>Install and maintain software, security updates and patches.</li>
+<li>Monitor health with CloudWatch; set alarms for thresholds and anomalies.</li>
+<li>Configure security groups, key pairs, IAM roles, policies and permissions.</li>
+<li>Automate patching and admin tasks with AWS Run Command.</li>
+<li>Manage S3 buckets and lifecycle policies for archival.</li>
+<li>Configure ALB rules, listeners, health checks and Auto Scaling.</li>
+<li>Deploy Lambda functions and manage ECS clusters.</li></ul></article>
+<article><h3>IT Support Team Lead</h3><div class="m">Cerebra Integrated Technologies Limited · Jul 2013 – Oct 2022</div><ul>
+<li>Troubleshooting, administration and service restoration for Windows Server 2003, 2008 and 2012.</li>
+<li>Administered Active Directory, DNS and Group Policy Objects.</li>
+<li>Configured and troubleshot network, router and firewall systems.</li>
+<li>Managed and monitored the company AWS account, including Payroll, Web, Tally and application servers.</li></ul></article>
+<article><h3>Leadership</h3><div class="m">Across roles</div><ul>
+<li>Communicating management goals and aligning team members to their roles.</li>
+<li>Delegating by individual strengths and keeping the team on schedule.</li>
+<li>Motivating with honesty, integrity and approachability.</li></ul></article>
+</div></div></section>
+
+<section id="skills" style="background:var(--bg2)"><div class="wrap rv">
+<span class="eyebrow">Toolbox</span><h2>Skills Matrix</h2>
+<p class="sub">Hands-on across AWS, OCI, identity management, infrastructure as code and on-premises systems.</p>
+<div class="filters" data-t="#sg">
+<button class="f on" data-f="all">All Stack</button><button class="f" data-f="aws">AWS</button><button class="f" data-f="sec">Security &amp; Identity</button><button class="f" data-f="iac">IaC &amp; Tools</button><button class="f" data-f="sys">Systems &amp; On-Prem</button>
+</div>
+<div class="sk" id="sg"></div>
+</div></section>
+
+<section id="certifications"><div class="wrap rv">
+<span class="eyebrow">Credentials</span><h2>Certifications &amp; Education</h2>
+<p class="sub">Industry certifications from AWS, Microsoft and JumpCloud, backed by formal education.</p>
+<div class="grid">
+<div class="card"><div class="ic">🏆</div><h3>AWS SysOps Administrator</h3><p>Associate</p><span class="badge">✓ Certified</span></div>
+<div class="card"><div class="ic">🏆</div><h3>AWS Solutions Architect</h3><p>Associate</p><span class="badge">✓ Certified</span></div>
+<div class="card"><div class="ic">🛡️</div><h3>AWS Security</h3><p>Specialty</p><span class="badge">✓ Certified</span></div>
+<div class="card"><div class="ic">🪟</div><h3>MCSA Windows Server 2016</h3><p>Microsoft Certified</p><span class="badge">✓ Certified</span></div>
+<div class="card"><div class="ic">🧩</div><h3>JumpCloud Certified</h3><p>Core</p><span class="badge">✓ Certified</span></div>
+</div>
+<h3 style="margin:40px 0 16px">🎓 Education</h3>
+<div class="grid">
+<div class="card"><h3>M.Com</h3><p>Dr. Bhimrao Ambedkar University, Agra (RBS College) · 2008</p></div>
+<div class="card"><h3>B.Com</h3><p>RBS College, Agra · 2006</p></div>
+<div class="card"><h3>IT Certificate Course</h3><p>HCL, 12 months: A+, N+, CCNA, Server 2012 R2, Linux · 2008</p></div>
+<div class="card"><h3>12th Standard</h3><p>St. John's Inter College, U.P. Board · 2002</p></div>
+</div></div></section>
+
+<section id="contact" style="background:var(--bg2)"><div class="wrap rv">
+<span class="eyebrow">Get in touch</span><h2>Let's Connect</h2>
+<p class="sub">Open to conversations about cloud engineering, infrastructure and opportunities.</p>
+<div class="contact">
+<div class="card"><div class="ic">✉️</div><h3>Email</h3><p>abbashcne@gmail.com</p><div class="tags"><a class="btn" href="mailto:abbashcne@gmail.com">Email me</a> <button class="btn" id="cp">Copy</button></div></div>
+<div class="card"><div class="ic">🐙</div><h3>GitHub</h3><p>github.com/shanavaz-eng</p><div class="tags"><a class="btn" href="https://github.com/shanavaz-eng">Follow</a></div></div>
+<div class="card"><div class="ic">📄</div><h3>Resume</h3><p>Download the full PDF resume.</p><div class="tags"><a class="btn p" href="shanavaz_resume.pdf">Download PDF</a></div></div>
+</div></div></section>
+
+<footer>© 2026 Shanavaz · Bangalore, India · <a href="#overview" style="color:var(--ac)">Back to top ↑</a></footer>
+
+<button class="btn p" id="fab">💻 &gt;_ Cloud CLI</button>
+<div id="term"><header><span>shanavaz-cli v1.0 — bash</span><button id="x">×</button></header>
+<div class="qc"><button data-c="whoami">👤 whoami</button><button data-c="skills">🛠️ skills</button><button data-c="certs">🏆 certs</button><button data-c="projects">🚀 projects</button><button data-c="contact">✉️ contact</button><button data-c="help">❓ help</button><button data-c="clear">🧹 clear</button></div>
+<div id="out">Welcome to Shanavaz's cloud shell. Type "help" or tap a command above.
+</div>
+<form id="f"><span style="color:#34d399">shanavaz@cloud:~$</span><input id="in" autocomplete="off" aria-label="command"></form></div>
+
+<script>
+const S=[["aws","🖥️","EC2"],["aws","⚡","Lambda"],["aws","🌱","Elastic Beanstalk"],["aws","📦","ECS"],["aws","🖱️","AppStream"],["aws","🪣","S3 / EBS / Glacier"],["aws","🗄️","RDS"],["aws","🌐","VPC"],["aws","🔌","Direct Connect"],["aws","🧭","Route 53"],["aws","🚀","CloudFront"],["aws","⚖️","Elastic Load Balancer"],["aws","📈","CloudWatch / CloudTrail"],
+["sec","🔑","IAM"],["sec","🗝️","KMS"],["sec","🛡️","AWS Shield / WAF"],["sec","🧱","Security Groups / NACLs"],["sec","🧩","JumpCloud (SSO, MFA, MDM)"],["sec","🔏","SAML & OIDC"],
+["iac","⚡","Terraform"],["iac","📡","Site24x7"],["iac","📡","StatusCake"],["iac","🎫","ServiceNow / Zoho"],["iac","🔧","PuTTY / WinSCP"],
+["sys","🐧","Linux"],["sys","🪟","Windows Server 2012 R2–2019"],["sys","📁","Active Directory / GPO"],["sys","🌍","DNS / DHCP"],["sys","🔁","Hyper-V & Failover Clustering"],["sys","💾","Enterprise Storage & Backup"],["sys","📶","Wired & Wi-Fi Networking"],["sys","📹","Surveillance & Printing"],["sys","📊","Office 365 / Tally"]];
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+$("#sg").innerHTML=S.map(([c,i,n])=>`<div class="skill" data-c="${c}"><span>${i}</span>${n}</div>`).join("");
+$("#menu").onclick=()=>$("#links").classList.toggle("open");
+$$("#links a").forEach(a=>a.onclick=()=>$("#links").classList.remove("open"));
+$$(".filters").forEach(b=>b.onclick=e=>{const f=e.target.dataset.f;if(!f)return;b.querySelectorAll(".f").forEach(x=>x.classList.toggle("on",x===e.target));$$(b.dataset.t+" > *").forEach(el=>el.classList.toggle("hide",f!=="all"&&!el.dataset.c.split(" ").includes(f)))});
+// typing
+const T=["AWS & Oracle Cloud","Cloud Security & IAM","Terraform Automation","Data Center Infrastructure"];let ti=0,ci=0,del=false;
+(function ty(){const w=T[ti];$("#typed").textContent=w.slice(0,ci);if(!del&&ci===w.length){del=true;return setTimeout(ty,1400)}if(del&&ci===0){del=false;ti=(ti+1)%T.length}ci+=del?-1:1;setTimeout(ty,del?35:70)})();
+// reveal + counters
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.1});
+$$(".rv").forEach(e=>io.observe(e));
+const co=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;co.unobserve(e.target);const n=+e.target.dataset.n,s=e.target.dataset.s||"";let v=0;const st=Math.max(1,Math.ceil(n/50));const t=setInterval(()=>{v=Math.min(n,v+st);e.target.textContent=v+(v===n?s:"");if(v===n)clearInterval(t)},30)}));
+$$("[data-n]").forEach(e=>co.observe(e));
+// copy
+$("#cp").onclick=e=>{try{navigator.clipboard.writeText("abbashcne@gmail.com");e.target.textContent="Copied ✓"}catch(_){}};
+// CLI
+const C={whoami:"Shanavaz — Associate Technical Lead, Rapyder Cloud Solutions\nBangalore, India · 11 years in cloud & IT infrastructure",skills:"AWS: EC2, S3, RDS, VPC, Lambda, ECS, ALB/ASG, CloudWatch\nSecurity: IAM, KMS, WAF, Shield, JumpCloud, SAML/OIDC\nIaC: Terraform, Run Command\nSystems: Linux, Windows Server, AD, Hyper-V, SAN",certs:"✓ AWS SysOps Administrator – Associate\n✓ AWS Solutions Architect – Associate\n✓ AWS Security – Specialty\n✓ MCSA Windows Server 2016\n✓ JumpCloud Certified – Core",projects:"• Biryani By Kilo (multi-account AWS)\n• Navi Migration (on-prem → AWS)\n• Karnataka State Police (100 TB storage)\n• KSRSAC Data Centre\n• Satish Dhawan Space Centre (250 thin clients)\n• Indian Air Force",contact:"Email : abbashcne@gmail.com\nGitHub: github.com/shanavaz-eng",help:"Commands: whoami, skills, certs, projects, contact, clear"};
+const out=$("#out");
+function run(c){c=c.trim().toLowerCase();if(!c)return;if(c==="clear"){out.textContent="";return}out.textContent+="$ "+c+"\n"+(C[c]||"command not found: "+c+' (try "help")')+"\n";out.scrollTop=out.scrollHeight}
+$("#fab").onclick=()=>$("#term").classList.toggle("open");$("#x").onclick=()=>$("#term").classList.remove("open");
+$$(".qc button").forEach(b=>b.onclick=()=>run(b.dataset.c));
+$("#f").onsubmit=e=>{e.preventDefault();run($("#in").value);$("#in").value=""};
+</script>
 </body>
 </html>
